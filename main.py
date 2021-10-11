@@ -56,8 +56,7 @@ def extract_info(url):
         title = soup.find('yt-formatted-string', class_='style-scope ytd-video-primary-info-renderer').text
         views = soup.find('span', class_='view-count style-scope ytd-video-view-count-renderer').text
         likes = soup.findAll('yt-formatted-string', class_='style-scope ytd-toggle-button-renderer style-text')[0].text
-        dislikes = soup.findAll('yt-formatted-string', class_='style-scope ytd-toggle-button-renderer style-text')[
-            1].text
+        dislikes = soup.findAll('yt-formatted-string', class_='style-scope ytd-toggle-button-renderer style-text')[1].text
         comment = driver.find_element_by_xpath("//*[@id='count']/yt-formatted-string/span[1]").text
 
         driver.quit()
